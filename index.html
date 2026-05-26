@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Longevity Website</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+
+    <header>
+      <!-- Top Bar -->
+      <div class="top-bar">
+        🌿 Empowering Lifelong Vitality Through Clean, Organic Living
+      </div>
+
+      <!-- Main Header -->
+      <div class="main-header container-fluid">
+        <div class="logo">
+          <img src="images/longevity-logo.png" />
+        </div>
+
+        <div class="search-container">
+          <input type="text" placeholder="Search wellness products..." />
+          <button>
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+        <div class="header-icons">
+          <i class="bi bi-cart-fill"></i>
+        </div>
+      </div>
+
+      <!-- Mega Navigation -->
+      <nav class="mega-nav">
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Supplements</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Vitamins</a></li>
+              <li><a href="#">Protein</a></li>
+              <li><a href="#">Herbal</a></li>
+              <li><a href="#">Collagen</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Organic Foods</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Superfoods</a></li>
+              <li><a href="#">Grains</a></li>
+              <li><a href="#">Snacks</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Wellness</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Skincare</a></li>
+              <li><a href="#">Detox</a></li>
+              <li><a href="#">Mindfulness</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Fitness</a></li>
+          <li><a href="#">Longevity</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <div class="swiper heroSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="wallpapers/hero-wallpaper-1.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="wallpapers/wallpaper-sample.png" alt="" />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <!-- arrows -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Countdown Banner -->
+
+    <div class="sale-banner">
+      <h2>Holiday Sale Ends In</h2>
+
+      <div class="timer">
+        <div class="time-box">
+          <span id="days">00</span>
+          <label>Days</label>
+        </div>
+
+        <div class="time-box">
+          <span id="hours">00</span>
+          <label>Hours</label>
+        </div>
+
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <label>Minutes</label>
+        </div>
+
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <label>Seconds</label>
+        </div>
+      </div>
+
+      <button class="shop-btn">Shop Now</button>
+    </div>
+
+    <!-- Holliday Deals -->
+
+    <section class="deals">
+      <div class="deals-header">
+        <h3>Holiday Deals</h3>
+      </div>
+
+      <div class="deals-container">
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+
+            <div class="hover-actions">
+              <button class="quick">👁 Quick Look</button>
+              <button class="cart">🛒 Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card view-all-card">
+          <div class="view-content">
+            <span class="count">4+</span>
+            <h3>Holiday Deals</h3>
+            <p>View All Offers</p>
+
+            <a href="#" class="view-btn">View All</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal Deals -->
+
+    <section class="deals">
+      <div class="deals-header">
+        <h3>Seasonal Deals</h3>
+      </div>
+
+      <div class="deals-container">
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+
+            <div class="hover-actions">
+              <button class="quick">👁 Quick Look</button>
+              <button class="cart">🛒 Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card view-all-card">
+          <div class="view-content">
+            <span class="count">4+</span>
+            <h3>Seasonal Deals</h3>
+            <p>View All Offers</p>
+
+            <a href="#" class="view-btn">View All</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vitality Support Products -->
+
+    <section class="deals">
+      <div class="deals-header">
+        <h3>Vitality Support Products</h3>
+      </div>
+
+      <div class="deals-container">
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+
+            <div class="hover-actions">
+              <button class="quick">👁 Quick Look</button>
+              <button class="cart">🛒 Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card view-all-card">
+          <div class="view-content">
+            <span class="count">4+</span>
+            <h3>Vitality Support Products</h3>
+            <p>View All Offers</p>
+
+            <a href="#" class="view-btn">View All</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Energy & Vitality Essentials -->
+
+    <section class="deals">
+      <div class="deals-header">
+        <h3>Energy & Vitality Essentials</h3>
+      </div>
+
+      <div class="deals-container">
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+
+            <div class="hover-actions">
+              <button class="quick">👁 Quick Look</button>
+              <button class="cart">🛒 Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="badge">-25%</div>
+
+          <div class="image-wrapper">
+            <img src="images/random_profile_pic7.png" alt="Product" />
+          </div>
+
+          <div class="deal-info">
+            <h3>Organic Greens Detox</h3>
+            <p>Natural energy & detox support</p>
+
+            <div class="price">
+              <span class="old">₱1,200</span>
+              <span class="new">₱899</span>
+            </div>
+
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rate">(4.8)</span>
+            </div>
+          </div>
+          <div class="hover-actions">
+            <button class="quick">👁 Quick Look</button>
+            <button class="cart">🛒 Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card view-all-card">
+          <div class="view-content">
+            <span class="count">4+</span>
+            <h3>Energy & Vitality Essentials</h3>
+            <p>View All Offers</p>
+
+            <a href="#" class="view-btn">View All</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop By Health Goals -->
+
+    <section class="health-goals">
+      <div class="goals-header">
+        <h2>Shop By Health Goals</h2>
+        <p>Choose products based on what your body needs most</p>
+      </div>
+
+      <div class="goals-grid">
+        <a href="#" class="goal-card">
+          <h3>🔥 Energy & Stamina</h3>
+          <p>Boost daily energy & endurance naturally</p>
+        </a>
+
+        <a href="#" class="goal-card">
+          <h3>🧠 Focus & Mental Clarity</h3>
+          <p>Support brain performance & concentration</p>
+        </a>
+
+        <a href="#" class="goal-card">
+          <h3>🛡️ Immune Support</h3>
+          <p>Strengthen your natural defense system</p>
+        </a>
+
+        <a href="#" class="goal-card">
+          <h3>🌿 Detox & Cleanse</h3>
+          <p>Remove toxins & support gut health</p>
+        </a>
+
+        <a href="#" class="goal-card">
+          <h3>💪 Recovery & Repair</h3>
+          <p>Support muscle recovery & cellular repair</p>
+        </a>
+
+        <a href="#" class="goal-card">
+          <h3>🌙 Sleep & Relaxation</h3>
+          <p>Improve sleep quality & stress balance</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Longevity Nutrition Plans -->
+
+    <section class="nutrition-plans">
+      <div class="nutrition-header">
+        <h2>Longevity Nutrition Plans</h2>
+      </div>
+
+      <div class="nutrition-grid">
+        <div class="nutrition-card">
+          <h3>🌿 Anti-Inflammatory Plan</h3>
+          <p>
+            Reduce inflammation and support overall wellness with clean foods.
+          </p>
+
+          <button class="read-btn">Read Now</button>
+        </div>
+
+        <div class="nutrition-card">
+          <h3>🔥 Energy Optimization Plan</h3>
+          <p>Boost natural energy levels and improve daily performance.</p>
+
+          <button class="read-btn">Read Now</button>
+        </div>
+
+        <div class="nutrition-card">
+          <h3>🧠 Brain & Focus Plan</h3>
+          <p>Support memory, clarity, and cognitive performance.</p>
+
+          <button class="read-btn">Read Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Follow Us -->
+
+    <section class="follow-us">
+      <h2>Follow Us</h2>
+      <p>Stay connected for wellness tips & updates</p>
+
+      <div class="social-icons">
+        <a href="#" class="icon facebook">📘</a>
+        <a href="#" class="icon instagram">📸</a>
+        <a href="#" class="icon tiktok">🎵</a>
+        <a href="#" class="icon youtube">▶️</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Loyalty Program</a></li>
+            <li><a href="#">Enoch AI Login</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Plant Guide</a></li>
+            <li><a href="#">Recipes</a></li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+        <div class="footer-column">
+          <h3>Additional Information</h3>
+          <ul>
+            <li><a href="#">About Our Products</a></li>
+            <li><a href="#">Our Lab</a></li>
+            <li><a href="#">Paying It Forward</a></li>
+            <li><a href="#">Wholesale Inquiries</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Affiliate Login</a></li>
+          </ul>
+        </div>
+
+        <!-- POLICIES -->
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Military Discount</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-column">
+          <h3>Join Our Newsletter</h3>
+          <p>Get wellness tips and product updates.</p>
+
+          <form class="newsletter">
+            <input type="text" placeholder="First Name" />
+            <input type="email" placeholder="Email*" required />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div class="footer-bottom">
+        <p>
+          Copyright © 2026 Longevity International Ventures. All Rights
+          Reserved.
+        </p>
+
+        <p class="support-id">Customer Support ID: 000000</p>
+
+        <p class="disclaimer">
+          These statements have not been evaluated by the Food and Drug
+          Administration. This product is not intended to diagnose, treat, cure,
+          or prevent any disease.
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Animation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="javascript/script.js"></script>
+    <script src="javascript/swiper.js"></script>
+  </body>
+</html>

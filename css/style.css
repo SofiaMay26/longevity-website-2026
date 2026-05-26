@@ -1,0 +1,666 @@
+/* Navigation Bar */
+
+.top-bar {
+  background: #26809c;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+
+.main-header {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 6%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.search-container {
+  width: 70%;
+  display: flex;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.header-icons i {
+  font-size: 35px;
+  padding: 0 25px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+.search-container button {
+  width: 70px;
+  border: none;
+  background: #8d9b6a;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Mega-nav Section*/
+
+.mega-nav {
+  transition: all 0.3s ease;
+  padding: 15px 0;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0;
+  padding: 10px 30px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 20%;
+  background-color: white;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 10px;
+  display: block;
+}
+
+/* when scrolled */
+.mega-nav.scrolled {
+  padding: 8px 0;
+  background: #246f45;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔽 Dropdown hidden */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  padding: 10px;
+}
+
+.dropdown-menu li a:hover {
+  background: white;
+  color: gray;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-menu li a {
+  color: #0ba70b;
+}
+
+/* Swiper Section */
+
+.swiper-slide img {
+  padding-top: 100px;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+  color: #2e8b57;
+}
+
+/* Countdown banner  */
+
+.sale-banner {
+  background: linear-gradient(135deg, #111, #1f1f1f);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+}
+
+.sale-banner h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.time-box {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.time-box label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.shop-btn {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: #ff1f1f;
+  transform: scale(1.05);
+}
+
+/* Holliday Deals */
+
+.deals {
+  padding: 60px 10%;
+  background: #f9f9f9;
+}
+
+.deals-header h3 {
+  color: #0ba70b;
+}
+
+.deals-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.deals-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* CARD BASE */
+.deal-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+/* IMAGE */
+.image-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e63946;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* INFO SECTION */
+.deal-info {
+  padding: 12px;
+}
+
+.deal-info h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.deal-info p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* PRICE */
+.price {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 13px;
+}
+
+.price .new {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* RATING */
+.rating {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.stars {
+  color: gold;
+}
+
+.hover-actions {
+  position: absolute;
+  left: 0;
+  bottom: -55px; /* pushes outside card */
+  width: 100%;
+
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 14px 14px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+
+  pointer-events: none;
+}
+
+/* SHOW ON HOVER (card hover = smoother UX) */
+.deal-card:hover .hover-actions {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* BUTTONS */
+.hover-actions button {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.hover-actions .quick {
+  background: #333;
+  color: white;
+}
+
+.hover-actions .quick:hover {
+  background: #000;
+}
+
+.hover-actions .cart {
+  background: #28a745;
+  color: white;
+}
+
+.hover-actions .cart:hover {
+  background: #1f8a39;
+}
+
+/* Shop by Health goals  */
+
+.health-goals {
+  padding: 70px 8%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.goals-header h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.goals-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.goal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+/* hover effect */
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* title */
+.goal-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* text */
+.goal-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+Longevity Nutrition Plans .nutrition-plans {
+  padding: 70px 8%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.nutrition-header h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.nutrition-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.nutrition-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.nutrition-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* title */
+.nutrition-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* text */
+.nutrition-card p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.read-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #1f7a4a;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.read-btn:hover {
+  background: #145a36;
+}
+
+.nutrition-plans {
+  padding: 10px 50px;
+}
+
+/* Follow Us */
+
+.follow-us {
+  text-align: center;
+  padding: 60px 8%;
+  background: #f9f9f9;
+}
+
+.follow-us h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.follow-us p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ICON WRAPPER */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ICON STYLE */
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+/* brand colors on hover */
+.facebook:hover {
+  background: #1877f2;
+  color: white;
+}
+
+.instagram:hover {
+  background: #e1306c;
+  color: white;
+}
+
+.tiktok:hover {
+  background: #000;
+  color: white;
+}
+
+.youtube:hover {
+  background: #ff0000;
+  color: white;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 8% 30px;
+  font-size: 14px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* HEADINGS */
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* LINKS */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.newsletter button {
+  padding: 10px;
+  border: none;
+  background: #2ecc71;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #27ae60;
+}
+
+/* SOCIAL */
+.footer-social {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.support-id {
+  margin-top: 10px;
+  color: #aaa;
+}
+
+.disclaimer {
+  margin-top: 10px;
+  font-size: 11px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
