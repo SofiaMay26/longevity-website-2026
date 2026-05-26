@@ -1,13 +1,27 @@
 // Navigation Bar
 
-window.addEventListener("scroll", function () {
-  const topBar = document.querySelector(".top-bar");
+const topBar = document.querySelector(".top-bar");
+const navbar = document.querySelector(".mega-nav");
+const header = document.querySelector(".main-header");
+const btn = document.querySelector(".scroll-menu-btn");
 
-  if (window.scrollY > 50) {
-    topBar.classList.add("scrolled");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    topBar.classList.add("hide");
+    navbar.classList.add("hide");
+    header.classList.add("move-up");
+    header.classList.add("header-scrolled");
   } else {
-    topBar.classList.remove("scrolled");
+    topBar.classList.remove("hide");
+    navbar.classList.remove("hide");
+    header.classList.remove("move-up");
+    header.classList.remove("header-scrolled");
   }
+});
+
+btn.addEventListener("click", () => {
+  navbar.classList.remove("hide");
+  navbar.classList.add("move-up");
 });
 
 // Countdown Banner
