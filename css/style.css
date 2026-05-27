@@ -344,7 +344,7 @@ h3 {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* INFO SECTION */
@@ -417,6 +417,7 @@ h3 {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  z-index: 2;
 }
 
 /* BUTTONS */
@@ -1192,6 +1193,23 @@ Longevity Nutrition Plans .nutrition-plans {
   border-radius: 8px;
 }
 
-.img-wrap {
-  position: relative;
+/* Product Page */
+
+#productGrid.list-mode .deal-card {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+#productGrid.list-mode .image-wrapper {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+#productGrid.list-mode .deal-info {
+  flex: 1;
+}
+
+#productGrid.list-mode .col-12 {
+  margin-bottom: 15px;
 }
