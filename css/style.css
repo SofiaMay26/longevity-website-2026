@@ -1,5 +1,6 @@
 body {
   font-family: "Inter", sans-serif !important;
+  padding-top: 200px;
 }
 
 h1,
@@ -200,10 +201,19 @@ h3 {
 
 /* Swiper Section */
 
-.swiper-slide img {
-  padding-top: 100px;
+.heroSwiper {
+  height: 500px;
+}
+
+.heroSwiper .swiper-slide {
+  height: 500px;
+}
+
+.heroSwiper .swiper-slide img {
+  padding: 15px;
   width: 100%;
-  z-index: 1;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-button-prev,
@@ -738,4 +748,450 @@ Longevity Nutrition Plans .nutrition-plans {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
+}
+
+.view-all-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 350px;
+}
+
+.view-all-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.view-all-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.view-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.view-content h3 {
+  margin: 10px 0;
+  font-size: 1.8rem;
+}
+
+.view-btn {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #fff;
+  color: #2f5d50;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.view-all-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Trust Bandages */
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #f8faf8;
+}
+
+.trust-badges div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust-badges img {
+  width: 140px;
+  height: 80px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.trust-badges img:hover {
+  transform: scale(1.05);
+}
+
+/* WHY CHOOSE US */
+.why-choose-us {
+  padding: 80px 5%;
+  background: #f8faf8;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #dcefe4;
+  color: #2f5d50;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #1f3b2d;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #2f5d50;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #2f5d50;
+}
+
+.section-title p {
+  color: #666;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 5%;
+  background: #f8faf8;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+  color: #2f5d50;
+}
+
+/* PRODUCTS */
+.featured-products {
+  padding: 80px 5%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  padding: 15px 20px 10px;
+  color: #2f5d50;
+}
+
+.product-card p {
+  padding: 0 20px;
+  color: #666;
+}
+
+.product-card .btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 20px;
+  background: #2f5d50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #7ba05b;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+.disclaimer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Comments */
+
+/* SECTION BACKGROUND */
+.testimonials {
+  padding: 90px 5%;
+  background: linear-gradient(135deg, #f8faf8, #eef6f0);
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #2f5d50;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* SWIPER WRAPPER */
+.testimonialSwiper {
+  padding: 20px 10px 60px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* HOVER EFFECT */
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+/* CUSTOMER IMAGE */
+.customer-img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #e8f3eb;
+}
+
+/* STARS */
+.stars {
+  color: #f5b301;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+/* TEXT */
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* NAME */
+.testimonial-card h4 {
+  color: #2f5d50;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* LABEL */
+.testimonial-card span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* PAGINATION DOTS */
+.testimonialSwiper .swiper-pagination-bullet {
+  background: #2f5d50;
+  opacity: 0.4;
+}
+
+.testimonialSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Vitamins Page */
+
+.breadcrumb-bar {
+  background: #fff;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.toolbar {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.toolbar select,
+.toolbar input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.price {
+  color: #1f7a3a;
+  font-weight: bold;
+}
+
+.btn-buy {
+  background: #1f7a3a;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.btn-buy:hover {
+  background: #16612d;
+}
+
+.badge-stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.img-wrap {
+  position: relative;
 }
