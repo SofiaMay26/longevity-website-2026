@@ -103,3 +103,85 @@ viewSelect?.addEventListener("change", () => {
     }
   });
 });
+
+// Item Page
+
+function changeImage(el) {
+  const mainImage = document.getElementById("mainProductImage");
+  mainImage.src = el.src;
+
+  // remove active class
+  document.querySelectorAll(".thumb").forEach((img) => {
+    img.classList.remove("active");
+  });
+
+  // set active
+  el.classList.add("active");
+}
+
+// Subscription
+
+const form = document.getElementById("newsletterForm");
+const msg = document.getElementById("newsletterMsg");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("firstName").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if (name === "" || email === "") {
+    msg.style.color = "red";
+    msg.textContent = "Please fill in all fields.";
+    return;
+  }
+
+  // Fake success (frontend only)
+  msg.style.color = "green";
+  msg.textContent = `Thanks ${name}! You are subscribed.`;
+
+  form.reset();
+});
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  setTimeout(() => {
+    preloader.classList.add("hide");
+  }, 1000);
+});
+
+// Create Account
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("registerForm");
+  const message = document.getElementById("message");
+
+  console.log("JS is working"); // DEBUG
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    // validation
+    if (!name || !email || !password) {
+      message.style.color = "red";
+      message.textContent = "⚠️ Please fill in all fields.";
+      return;
+    }
+
+    if (password.length < 6) {
+      message.style.color = "red";
+      message.textContent = "⚠️ Password must be at least 6 characters.";
+      return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "✅ Account created successfully!";
+
+    form.reset();
+  });
+});

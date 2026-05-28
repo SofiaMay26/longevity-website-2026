@@ -1,0 +1,79 @@
+/* Cart */
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 160px;
+}
+
+.quantity-input {
+  width: 60px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.sticky-top {
+  top: 100px;
+}
+
+.btn-success {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.govx-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.govx-logo {
+  width: 120px;
+  object-fit: contain;
+}
+
+.govx-content h5 {
+  margin-bottom: 10px;
+}
+
+.govx-content p {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.cart-summary {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-summary h4 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.secure-note {
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+#empty-cart {
+  display: none;
+}

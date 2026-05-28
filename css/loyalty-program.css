@@ -1,0 +1,131 @@
+.hero {
+  background-image: url(../wallpapers/wallpaper-lonevity-reward.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-tier {
+  transition: 0.3s;
+  border: none;
+  border-radius: 15px;
+}
+
+.card-tier:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+  background: #198754;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background: #145c3a;
+  color: white;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f2d2a;
+}
+
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #4caf50;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* TIMELINE WRAPPER */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e0e0e0;
+}
+
+/* ITEM */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* CIRCLE NUMBER */
+.circle {
+  width: 40px;
+  height: 40px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 1;
+  margin-right: 20px;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* CONTENT CARD */
+.content {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.content:hover {
+  transform: translateX(8px);
+}
+
+/* TEXT */
+.content h5 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2e3d39;
+}
+
+.content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 18px;
+  }
+}

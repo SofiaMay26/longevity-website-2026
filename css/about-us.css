@@ -1,0 +1,154 @@
+/* About Us */
+
+.about-us-section {
+  padding: 80px 0;
+  background: #f8fff9;
+}
+
+.about-header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #e7f8ec;
+  color: #1f6f3d;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1f6f3d;
+  margin-bottom: 20px;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.about-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+}
+
+.about-card i {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  color: #1f6f3d;
+  margin-bottom: 15px;
+}
+
+.section-title h2 {
+  color: #1f6f3d;
+  font-weight: 700;
+}
+
+.feature-box {
+  background: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 16px;
+  height: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+}
+
+.feature-box i {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.feature-box h5 {
+  color: #1f6f3d;
+  margin-bottom: 10px;
+}
+
+.commitment-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.commitment-section h2 {
+  color: #1f6f3d;
+  margin-bottom: 20px;
+}
+
+.quality-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.quality-item {
+  background: #e7f8ec;
+  color: #1f6f3d;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.about-cta {
+  margin-top: 70px;
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #1f6f3d, #36a85d);
+  border-radius: 24px;
+  color: white;
+}
+
+.about-cta h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.btn-shop {
+  display: inline-block;
+  margin-top: 15px;
+  background: white;
+  color: #1f6f3d;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-shop:hover {
+  transform: translateY(-3px);
+  color: #1f6f3d;
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .commitment-section {
+    padding: 25px;
+  }
+}

@@ -114,12 +114,18 @@ h3 {
 /* Mega-nav Section*/
 
 .mega-nav {
-  transition: all 0.3s ease;
-  padding: 15px 0;
   position: fixed;
-  width: 100%;
-  z-index: 2;
   top: 120px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  padding: 15px 0;
+
+  background: #fff; /* important for shadow visibility */
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .mega-nav.show {
@@ -197,7 +203,34 @@ h3 {
 .nav-menu li a {
   color: #0ba70b;
 }
-*/
+
+@media (max-width: 992px) {
+  .main-header {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .header-icons {
+    order: 2;
+  }
+
+  .search-container {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .main-header {
+    top: 70px;
+  }
+}
 
 /* Swiper Section */
 
@@ -1198,11 +1231,11 @@ Longevity Nutrition Plans .nutrition-plans {
 #productGrid.list-mode .deal-card {
   display: flex;
   gap: 20px;
-  align-items: stretch;
+  align-items: center;
 }
 
 #productGrid.list-mode .image-wrapper {
-  width: 140px;
+  width: 150px;
   flex-shrink: 0;
 }
 
@@ -1210,6 +1243,188 @@ Longevity Nutrition Plans .nutrition-plans {
   flex: 1;
 }
 
-#productGrid.list-mode .col-12 {
-  margin-bottom: 15px;
+/* Mobile list view */
+@media (max-width: 576px) {
+  #productGrid.list-mode .deal-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #productGrid.list-mode .image-wrapper {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+/* Toolbar */
+.toolbar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.toolbar select {
+  min-width: 140px;
+}
+
+.toolbar label {
+  white-space: nowrap;
+}
+
+/* Tablet */
+.toolbar select {
+  min-width: 140px;
+}
+
+@media (max-width: 768px) {
+  .toolbar .form-select {
+    width: 100% !important;
+  }
+
+  .toolbar .d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+}
+
+.deal-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-info {
+  flex-grow: 1;
+}
+
+/* breadcrumb */
+
+.breadcrumb-bar {
+  background: #f5f5f5;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  margin: 20px 0;
+  word-break: break-word;
+}
+
+.breadcrumb-bar a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-bar span {
+  margin: 0 6px;
+}
+
+.breadcrumb-bar .current {
+  color: #666;
+  font-weight: 500;
+}
+
+/* PRELOADER */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+.loader-logo {
+  width: 200px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Fade Out */
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Logo Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.loader-logo {
+  width: 200px;
+  animation: zoomIn 1.5s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-social h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+  padding: 6px;
+}
+
+.social-links img:hover {
+  transform: translateY(-4px) scale(1.1);
+  background: #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

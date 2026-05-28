@@ -53,7 +53,6 @@
       <!-- Main Header -->
 
       <div class="main-header container-fluid">
-        <button class="scroll-menu-btn">☰</button>
         <div class="logo">
           <img src="../images/longevity-logo.png" />
         </div>
@@ -66,61 +65,66 @@
         </div>
 
         <div class="header-icons">
-          <i class="bi bi-cart-fill"></i>
+          <a href="../pages/cart.html" class="position-relative">
+            <i class="bi bi-cart-fill fs-4"></i>
+
+            <span
+              id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+            </span>
+          </a>
         </div>
       </div>
 
       <!-- Mega Navigation -->
       <nav class="mega-nav">
         <ul class="nav-menu">
-          <li><a href="#">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
 
           <li class="dropdown">
             <a href="#">Supplements</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Protein</a></li>
-              <li><a href="#">Herbal</a></li>
-              <li><a href="#">Collagen</a></li>
+              <li><a href="../pages/selection-page.html">Vitamins</a></li>
+              <li><a href="../pages/selection-page.html">Protein</a></li>
+              <li><a href="../pages/selection-page.html">Herbal</a></li>
+              <li><a href="../pages/selection-page.html">Collagen</a></li>
             </ul>
           </li>
 
           <li class="dropdown">
             <a href="#">Organic Foods</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Superfoods</a></li>
-              <li><a href="#">Grains</a></li>
-              <li><a href="#">Snacks</a></li>
+              <li><a href="../pages/selection-page.html">Superfoods</a></li>
+              <li><a href="../pages/selection-page.html">Grains</a></li>
+              <li><a href="../pages/selection-page.html">Snacks</a></li>
             </ul>
           </li>
 
           <li class="dropdown">
             <a href="#">Wellness</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Skincare</a></li>
-              <li><a href="#">Detox</a></li>
-              <li><a href="#">Mindfulness</a></li>
+              <li><a href="../pages/selection-page.html">Skincare</a></li>
+              <li><a href="../pages/selection-page.html">Detox</a></li>
+              <li><a href="../pages/selection-page.html">Mindfulness</a></li>
             </ul>
           </li>
 
-          <li><a href="#">Fitness</a></li>
-          <li><a href="#">Longevity</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="../pages/selection-page.html">Fitness</a></li>
+          <li><a href="../pages/selection-page.html">Longevity</a></li>
+          <li><a href="../pages/selection-page.html">Blog</a></li>
+          <li><a href="../pages/selection-page.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb-bar">Home / Page Sample</div>
 
     <div class="container py-3">
-      <div class="page-title">Page Sample</div>
-
       <!-- BREADCRUMB -->
-      <div class="breadcrumb-bar">Home / Page Sample</div>
+      <div class="breadcrumb-bar">Home / Selection Page Sample</div>
 
       <div class="container py-3">
-        <div class="page-title">Page Sample</div>
+        <div class="page-title">Selection Page Sample</div>
 
         <!-- TOOLBAR -->
         <div
@@ -163,25 +167,20 @@
       <!-- PRODUCTS -->
       <div id="productGrid" class="row g-4">
         <!-- Card 1 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Natures Bounty Superfood"
-            data-price="1000"
-            data-stock="1"
-          >
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/superfood-1.jpg" alt="Product" />
+              <img src="images/superfood-1.jpg" alt="Product" />
             </div>
 
             <div class="deal-info">
-              <h3 class="product-title">Natures Bounty Superfood</h3>
+              <h3>Natures Bounty Superfood</h3>
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱1,000</span>
+                <span class="old">₱1,200</span>
                 <span class="new">₱899</span>
               </div>
 
@@ -190,26 +189,31 @@
                 <span class="rate">(4.8)</span>
               </div>
             </div>
-
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Natures Bounty Superfood',
+                    899,
+                    '../images/superfood-1.jpg',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Sunfood Organic Macha Powder"
-            data-price="1200"
-            data-stock="1"
-          >
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/superfood-2.jpg" alt="Product" />
+              <img src="images/superfood-2.jpg" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -225,26 +229,32 @@
                 <span class="stars">★★★★★</span>
                 <span class="rate">(4.8)</span>
               </div>
-            </div>
 
-            <div class="hover-actions">
-              <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <div class="hover-actions">
+                <button class="quick">👁 Quick Look</button>
+                <button
+                  class="cart"
+                  onclick="
+                    addToCart(
+                      'Sunfood Organic Macha Powder',
+                      1200,
+                      '../images/superfood-2.jpg',
+                    )
+                  "
+                >
+                  🛒 Add to Cart
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Coconola"
-            data-price="1200"
-            data-stock="1"
-          >
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/superfood-3.jpg" alt="Product" />
+              <img src="images/superfood-3.jpg" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -263,22 +273,24 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart('Coconola', 899, '../images/superfood-3.jpg')
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
         <!-- Card 4 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Organic Greens Detox"
-            data-price="999"
-            data-stock="1"
-          >
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/organic-supplament-1.png" alt="Product" />
+              <img src="images/organic-supplament-1.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -286,8 +298,8 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱999</span>
-                <span class="new">₱1000</span>
+                <span class="old">₱1,200</span>
+                <span class="new">₱899</span>
               </div>
 
               <div class="rating">
@@ -297,22 +309,28 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Organic Greens Detox',
+                    899,
+                    '../images/organic-supplament-1.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <!-- Card 4 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Tulsi Capsules"
-            data-price="700"
-            data-stock="1"
-          >
+        <!-- Card 5 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/organic-supplament-2.png" alt="Product" />
+              <img src="images/organic-supplament-2.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -320,8 +338,8 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱700</span>
-                <span class="new">₱800</span>
+                <span class="old">₱1,200</span>
+                <span class="new">₱899</span>
               </div>
 
               <div class="rating">
@@ -331,23 +349,29 @@
 
               <div class="hover-actions">
                 <button class="quick">👁 Quick Look</button>
-                <button class="cart">🛒 Add to Cart</button>
+                <button
+                  class="cart"
+                  onclick="
+                    addToCart(
+                      'Tulsi Capsules',
+                      899,
+                      '../images/organic-supplament-2.png',
+                    )
+                  "
+                >
+                  🛒 Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 5 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Organic Sprulina Powder"
-            data-price="650"
-            data-stock="1"
-          >
+        <!-- Card 6 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/organic-supplament-3.png" alt="Product" />
+              <img src="images/organic-supplament-3.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -355,8 +379,8 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱650</span>
-                <span class="new">₱700</span>
+                <span class="old">₱1,200</span>
+                <span class="new">₱899</span>
               </div>
 
               <div class="rating">
@@ -366,22 +390,28 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Organic Sprulina Powder',
+                    899,
+                    '../images/organic-supplament-3.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <!-- Card 6 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Gravity Recumben Bike"
-            data-price="15000"
-            data-stock="1"
-          >
+        <!-- Card 7 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/gravity_recumbent_bike.png" alt="Product" />
+              <img src="images/gravity_recumbent_bike.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -389,8 +419,8 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱15,000</span>
-                <span class="new">₱10,000</span>
+                <span class="old">₱20,000</span>
+                <span class="new">₱899</span>
               </div>
 
               <div class="rating">
@@ -400,22 +430,28 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Gravity Recumben Bike',
+                    20000,
+                    '../images/gravity_recumbent_bike.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <!-- Card 7 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Gravity Threadmill"
-            data-price="20000"
-            data-stock="1"
-          >
+        <!-- Card 8 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/gravity_threadmill.png" alt="Product" />
+              <img src="images/gravity_threadmill.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -423,7 +459,7 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱20,000</span>
+                <span class="old">₱21,000</span>
                 <span class="new">₱19,000</span>
               </div>
 
@@ -434,23 +470,29 @@
 
               <div class="hover-actions">
                 <button class="quick">👁 Quick Look</button>
-                <button class="cart">🛒 Add to Cart</button>
+                <button
+                  class="cart"
+                  onclick="
+                    addToCart(
+                      'Gravity Threadmill',
+                      19000,
+                      '../images/gravity_recumbent_bike.png',
+                    )
+                  "
+                >
+                  🛒 Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 8 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Gravity Upright Bike"
-            data-price="18000"
-            data-stock="1"
-          >
+        <!-- Card 9 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/gravity_upright_bike.png" alt="Product" />
+              <img src="images/gravity_upright_bike.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -458,8 +500,8 @@
               <p>Natural energy & detox support</p>
 
               <div class="price">
-                <span class="old">₱18,000</span>
-                <span class="new">₱16,500</span>
+                <span class="old">₱21,000</span>
+                <span class="new">₱20,000</span>
               </div>
 
               <div class="rating">
@@ -469,22 +511,28 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Gravity Upright Bike',
+                    20000,
+                    '../images/gravity_recumbent_bike.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <!-- Card 9 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Dermcare Lotion"
-            data-price="800"
-            data-stock="1"
-          >
+        <!-- Card 10 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/dermcare_lotion.png" alt="Product" />
+              <img src="images/dermcare_lotion.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -492,8 +540,8 @@
               <p>Natural Daily Routines</p>
 
               <div class="price">
-                <span class="old">₱800</span>
-                <span class="new">₱750</span>
+                <span class="old">₱500</span>
+                <span class="new">₱450</span>
               </div>
 
               <div class="rating">
@@ -503,22 +551,28 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Dermcare Lotion',
+                    450,
+                    '../images/gravity_recumbent_bike.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <!-- Card 10 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Avon Derma Care"
-            data-price="900"
-            data-stock="1"
-          >
+        <!-- Card 11 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
-              <img src="../images/avon_derma_care.png" alt="Product" />
+              <img src="images/avon_derma_care.png" alt="Product" />
             </div>
 
             <div class="deal-info">
@@ -526,8 +580,8 @@
               <p>Natural Daily Routines</p>
 
               <div class="price">
-                <span class="old">₱900</span>
-                <span class="new">₱1,200</span>
+                <span class="old">₱1,200</span>
+                <span class="new">₱899</span>
               </div>
 
               <div class="rating">
@@ -537,19 +591,28 @@
 
               <div class="hover-actions">
                 <button class="quick">👁 Quick Look</button>
-                <button class="cart">🛒 Add to Cart</button>
+                <div class="hover-actions">
+                  <button class="quick">👁 Quick Look</button>
+                  <button
+                    class="cart"
+                    onclick="
+                      addToCart(
+                        'Avon Derma Care',
+                        450,
+                        '../images/avon_derma_care.png',
+                      )
+                    "
+                  >
+                    🛒 Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 11 -->
-        <div class="col-md-3 col-sm-6">
-          <div
-            class="deal-card product"
-            data-name="Aveeno Skin Relief"
-            data-price="1300"
-            data-stock="1"
-          >
+        <!-- Card 12 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="deal-card">
             <div class="badge">-25%</div>
 
             <div class="image-wrapper">
@@ -561,8 +624,8 @@
               <p>Natural Daily Routines</p>
 
               <div class="price">
-                <span class="old">₱1,300</span>
-                <span class="new">₱1,500</span>
+                <span class="old">₱800</span>
+                <span class="new">₱600</span>
               </div>
 
               <div class="rating">
@@ -572,7 +635,18 @@
             </div>
             <div class="hover-actions">
               <button class="quick">👁 Quick Look</button>
-              <button class="cart">🛒 Add to Cart</button>
+              <button
+                class="cart"
+                onclick="
+                  addToCart(
+                    'Aveeno Skin Relief',
+                    600,
+                    '../images/avon_derma_care.png',
+                  )
+                "
+              >
+                🛒 Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -586,8 +660,8 @@
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Loyalty Program</a></li>
+            <li><a href="../pages/about-us.html">About Us</a></li>
+            <li><a href="../pages/loyalty-program.html">Loyalty Program</a></li>
             <li><a href="#">Enoch AI Login</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Customer Service</a></li>
@@ -625,11 +699,18 @@
           <h3>Join Our Newsletter</h3>
           <p>Get wellness tips and product updates.</p>
 
-          <form class="newsletter">
-            <input type="text" placeholder="First Name" />
-            <input type="email" placeholder="Email*" required />
+          <form class="newsletter" id="newsletterForm">
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+            <input type="email" id="email" placeholder="Email*" required />
             <button type="submit">Sign Up</button>
           </form>
+
+          <p class="newsletter-msg" id="newsletterMsg"></p>
         </div>
       </div>
 
@@ -637,9 +718,10 @@
       <div class="footer-social">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
+          <img src="../logo/facebook_icon.jpg" alt="" />
+          <img src="../logo/google-logo.jpg" alt="" />
+          <img src="../logo/twitter-logo.jpg" alt="" />
+          <img src="../logo/pinterest-logo.jpg" alt="" />
         </div>
       </div>
 
@@ -680,5 +762,6 @@
     <!-- Javascript -->
     <script src="../javascript/script.js"></script>
     <script src="../javascript/swiper.js"></script>
+    <script src="../javascript/cart.js"></script>
   </body>
 </html>
