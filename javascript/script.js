@@ -39,86 +39,6 @@ function getColumns() {
   );
 }
 
-// ================= SORT =================
-sortSelect?.addEventListener("change", () => {
-  let cards = getColumns();
-
-  cards.sort((a, b) => {
-    const aCard = a.querySelector(".product");
-    const bCard = b.querySelector(".product");
-
-    const nameA = aCard.dataset.name.toLowerCase();
-    const nameB = bCard.dataset.name.toLowerCase();
-
-    const priceA = Number(aCard.dataset.price);
-    const priceB = Number(bCard.dataset.price);
-
-    switch (sortSelect.value) {
-      case "A-Z":
-        return nameA.localeCompare(nameB);
-      case "Z-A":
-        return nameB.localeCompare(nameA);
-      case "Price Low to High":
-        return priceA - priceB;
-      case "Price High to Low":
-        return priceB - priceA;
-    }
-  });
-
-  cards.forEach((col) => grid.appendChild(col));
-});
-
-// ================= OUT OF STOCK =================
-hideOutOfStock?.addEventListener("change", () => {
-  document.querySelectorAll(".product").forEach((card) => {
-    const inStock = card.dataset.stock === "1";
-
-    card.parentElement.style.display =
-      hideOutOfStock.checked && !inStock ? "none" : "";
-  });
-});
-
-// ================= SHOW LIMIT =================
-showSelect?.addEventListener("change", () => {
-  const limit = Number(showSelect.value);
-
-  getColumns().forEach((col, index) => {
-    col.style.display = index < limit ? "" : "none";
-  });
-});
-
-// ================= VIEW MODE =================
-viewSelect?.addEventListener("change", () => {
-  const isList = viewSelect.value === "list";
-
-  grid.classList.toggle("list-mode", isList);
-
-  getColumns().forEach((col) => {
-    if (isList) {
-      col.classList.remove("col-md-3", "col-sm-6");
-      col.classList.add("col-12");
-    } else {
-      col.classList.add("col-md-3", "col-sm-6");
-      col.classList.remove("col-12");
-    }
-  });
-});
-
-// Item Page
-
-function changeImage(el) {
-  const mainImage = document.getElementById("mainProductImage");
-  mainImage.src = el.src;
-
-  // remove active class
-  document.querySelectorAll(".thumb").forEach((img) => {
-    img.classList.remove("active");
-  });
-
-  // set active
-  el.classList.add("active");
-}
-
 // Subscription
 
 const form = document.getElementById("newsletterForm");
@@ -184,4 +104,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.reset();
   });
+});
+
+// Sort //
+
+document.addEventListener("DOMContentLoaded", () => {
+  const productGrid = document.getElementById("productGrid");
+
+  const sortSelect = document.getElementById("sortSelect");
+  const hideOutOfStock = document.getElementById("hideOutOfStock");
+  const showSelect = document.getElementById("showSelect");
+  const viewSelect = document.getElementById("viewSelect");
+
+  function updateProducts() {
+    let products = Array.from(productGrid.children);
+
+    // SORT
+    products.sort((a, b) => {
+      const cardA = a.querySelector(".deal-card");
+      const cardB = b.querySelector(".deal-card");
+
+      const nameA = cardA.dataset.name;
+      const nameB = cardB.dataset.name;
+
+      const priceA = Number(cardA.dataset.price);
+      const priceB = Number(cardB.dataset.price);
+
+      switch (sortSelect.value) {
+        case "A-Z":
+          return nameA.localeCompare(nameB);
+
+        case "Z-A":
+          return nameB.localeCompare(nameA);
+
+        case "Price Low to High":
+          return priceA - priceB;
+
+        case "Price High to Low":
+          return priceB - priceA;
+
+        default:
+          return 0;
+      }
+    });
+
+    // Reorder cards
+    products.forEach((product) => {
+      productGrid.appendChild(product);
+    });
+
+    // Hide/Show products
+    const limit = Number(showSelect.value);
+    let visibleCount = 0;
+
+    products.forEach((product) => {
+      const card = product.querySelector(".deal-card");
+
+      if (hideOutOfStock.checked && card.dataset.stock === "out") {
+        product.style.display = "none";
+        return;
+      }
+
+      visibleCount++;
+
+      if (visibleCount <= limit) {
+        product.style.display = "";
+      } else {
+        product.style.display = "none";
+      }
+    });
+
+    // Grid/List View
+    products.forEach((product) => {
+      const card = product.querySelector(".deal-card");
+
+      if (viewSelect.value === "list") {
+        product.className = "col-12";
+        card.classList.add("list-view");
+      } else {
+        product.className = "col-xl-3 col-lg-4 col-md-6 col-12";
+        card.classList.remove("list-view");
+      }
+    });
+  }
+
+  sortSelect.addEventListener("change", updateProducts);
+  hideOutOfStock.addEventListener("change", updateProducts);
+  showSelect.addEventListener("change", updateProducts);
+  viewSelect.addEventListener("change", updateProducts);
+
+  updateProducts();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Toolbar JS loaded");
+
+  const productGrid = document.getElementById("productGrid");
+  console.log("productGrid:", productGrid);
+
+  const sortSelect = document.getElementById("sortSelect");
+  console.log("sortSelect:", sortSelect);
 });

@@ -2,16 +2,32 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // REMOVE BAD ITEMS AUTOMATICALLY
 cart = cart.filter((item) => item && item.name);
-
+function getCart() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
 /* =====================
-   CART CORE FUNCTIONS
+   SAVE CART
 ===================== */
-
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+/* =====================
+   MASTER UPDATE
+===================== */
+function updateCart() {
+  saveCart();
+  updateCartCount();
+  renderCart();
+  updateSubtotal();
+}
+
+/* =====================
+   ADD TO CART
+===================== */
 function addToCart(name, price, image) {
+  let cart = getCart();
+
   let existing = cart.find((item) => item.name === name);
 
   if (existing) {
@@ -20,28 +36,32 @@ function addToCart(name, price, image) {
     cart.push({ name, price, image, qty: 1 });
   }
 
-  saveCart();
-  updateCartCount();
-  renderCart();
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCount(); // 🔥 refresh badge immediately
 }
 
+/* =====================
+   REMOVE ITEM
+===================== */
 function removeItem(name) {
   cart = cart.filter((item) => item.name !== name);
-
-  saveCart();
-  updateCartCount();
-  renderCart();
+  updateCart();
 }
 
+/* =====================
+   INCREASE QTY
+===================== */
 function increaseQty(name) {
   let item = cart.find((i) => i.name === name);
   if (item) item.qty++;
 
-  saveCart();
-  updateCartCount();
-  renderCart();
+  updateCart();
 }
 
+/* =====================
+   DECREASE QTY
+===================== */
 function decreaseQty(name) {
   let item = cart.find((i) => i.name === name);
 
@@ -53,34 +73,38 @@ function decreaseQty(name) {
     }
   }
 
-  saveCart();
-  updateCartCount();
-  renderCart();
+  updateCart();
 }
 
 /* =====================
-   CART BADGE
+   CART COUNT BADGE
 ===================== */
 
 function updateCartCount() {
   const badge = document.getElementById("cart-count");
-
   if (!badge) return;
 
-  let totalItems = cart.reduce((sum, item) => sum + (item.qty || 0), 0);
+  const cart = getCart();
+
+  let totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
 
   badge.textContent = totalItems;
 
   badge.style.display = totalItems > 0 ? "inline-block" : "none";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateCartCount();
-});
+function updateSubtotal() {
+  const subtotalEl = document.getElementById("subtotal");
+  if (!subtotalEl) return;
 
-/* =====================
-   RENDER CART PAGE
-===================== */
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let subtotal = cart.reduce((sum, item) => {
+    return sum + item.price * item.qty;
+  }, 0);
+
+  subtotalEl.textContent = subtotal.toLocaleString("en-PH");
+}
 
 function renderCart() {
   const container = document.getElementById("cart-items");
@@ -99,66 +123,57 @@ function renderCart() {
   container.innerHTML = cart
     .map(
       (item) => `
-    <div class="card shadow-sm border-0 mb-3">
-      <div class="card-body">
-        <div class="row align-items-center">
+      <div class="card shadow-sm border-0 mb-3">
+        <div class="card-body">
+          <div class="row align-items-center">
 
-          <div class="col-md-3">
-            <img src="${item.image}" class="img-fluid rounded">
-          </div>
-
-          <div class="col-md-6">
-            <h5>${item.name}</h5>
-
-            <div class="quantity-box d-flex gap-2 align-items-center">
-              <button class="btn btn-outline-secondary"
-                onclick="decreaseQty('${item.name}')">−</button>
-
-              <input type="text" value="${item.qty}" readonly
-                class="form-control text-center" style="width:70px">
-
-              <button class="btn btn-outline-secondary"
-                onclick="increaseQty('${item.name}')">+</button>
+            <div class="col-md-3">
+              <img src="${item.image}" class="img-fluid rounded">
             </div>
 
-            <button class="btn btn-danger btn-sm mt-2"
-              onclick="removeItem('${item.name}')">
-              Remove
-            </button>
-          </div>
+            <div class="col-md-6">
+              <h5>${item.name}</h5>
 
-          <div class="col-md-3 text-end">
-            <h4 class="text-success">
-              ₱${item.price * item.qty}
-            </h4>
-          </div>
+              <div class="quantity-box d-flex gap-2 align-items-center">
+                <button class="btn btn-outline-secondary"
+                  onclick="decreaseQty('${item.name}')">−</button>
 
+                <input type="text" value="${item.qty}" readonly
+                  class="form-control text-center" style="width:70px">
+
+                <button class="btn btn-outline-secondary"
+                  onclick="increaseQty('${item.name}')">+</button>
+              </div>
+
+              <button class="btn btn-danger btn-sm mt-2"
+                onclick="removeItem('${item.name}')">
+                Remove
+              </button>
+            </div>
+
+            <div class="col-md-3 text-end">
+              <h4 class="text-success">
+                ₱${(item.price * item.qty).toLocaleString("en-PH")}
+              </h4>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  `,
+    `,
     )
     .join("");
 }
-/* =====================
-   INIT
-===================== */
+
+function updateCart() {
+  saveCart();
+  updateCartCount();
+  renderCart();
+  updateSubtotal();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   renderCart();
+  updateSubtotal();
 });
-
-function addToCart(name, price, image) {
-  let existing = cart.find((item) => item.name === name);
-
-  if (existing) {
-    existing.qty++;
-  } else {
-    cart.push({ name, price, image, qty: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  updateCartCount(); // 🔥 IMPORTANT
-}

@@ -1428,3 +1428,14 @@ Longevity Nutrition Plans .nutrition-plans {
   background: #e0e0e0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.deal-card.list-view {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.deal-card.list-view .image-wrapper {
+  width: 150px;
+  flex-shrink: 0;
+}
