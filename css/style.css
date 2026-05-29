@@ -9,6 +9,11 @@ h3 {
   font-family: "Playfair Display", serif;
 }
 
+a {
+  text-decoration: none;
+  color: #111;
+}
+
 /* Navigation Bar */
 
 .top-bar {
